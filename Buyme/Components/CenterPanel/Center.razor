@@ -42,7 +42,7 @@
     [Parameter]
     public List<string> filterList { get; set; }
     public string SearchTerm { get; set; } = "";
-    public List<Product>? WholeProducts;
+    public List<Product>? WholeProducts = new List<Product>();
 
     public async Task AddToCard(Product product)
     {
@@ -51,7 +51,9 @@
 
     protected override void OnInitialized()
     {
+        Console.WriteLine("center is initailized");
         WholeProducts = Produktrepo.getAllProdukt();
+        StateHasChanged();
     }
     public void search(string productName)
     {
@@ -67,11 +69,16 @@
     }
     protected override void OnParametersSet()
     {
-        if(filterList is not null)
+        Console.WriteLine("On pramenterset is initailized");
+        if (filterList.Count > 0)
+
         {
-             WholeProducts = Produktrepo.GetProductByTypeSelected(filterList);
+            WholeProducts = Produktrepo.GetProductByTypeSelected(filterList);
+
         }
-       
+      
+      
+
     }
     public void Filteraction()
     {

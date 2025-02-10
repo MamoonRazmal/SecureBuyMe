@@ -1,4 +1,3 @@
-
 @using BuyMe.Components.Data
 @inject SessionStore SessionStore
 @inject PriceObserver pricestate
@@ -16,12 +15,13 @@
                 {
 
                     <div class="card text-center p-1" style="width: 6rem;">
-                        <img src="/img/@(cart.ProductPic)" class="img-thumbnail w-100 h-auto"  alt="produkt Image">
+                        <img src="/img/@(cart.ProductPic)" class="img-thumbnail w-100 h-auto" alt="produkt Image">
                         <div class="card-body">
                             <p class="mb-0 fw-bold small">@cart.ProductName</p>
                             <p class="mb-0 text-muted small">@cart.Price €</p>
-                           
-                            <button class="btn btn-danger btn-sm mt-1" type="button" @onclick="() => deleteFromCart(cart)">Remove </button>
+
+                            <button class="btn btn-danger btn-sm mt-1" type="button"
+                                @onclick="() => deleteFromCart(cart)">Remove </button>
 
 
                         </div>
@@ -31,11 +31,20 @@
 
             </div>
         </div>
-        <span>Items in cart @carts.Count()</span> <br/>
+        <span>Items in cart @carts.Count()</span> <br />
         <span>totalprice @totalprice €</span>
-        @if(carts.Count()>0)
+
+        @if (carts.Count() > 0)
         {
-            <button class="btn btn-Primary" type="button">Checkout</button>
+            <AuthorizeView>
+                <Authorized>
+                    <button class="btn btn-Primary" type="button">Checkout</button>
+                </Authorized>
+                <NotAuthorized>
+                    <p>Please Login</p>
+                </NotAuthorized>
+            </AuthorizeView>
+
         }
     }
 
@@ -49,19 +58,19 @@
     }
     public void UpdateTotalPrice(decimal totalprices)
     {
-        totalprice= totalprices;
+        totalprice = totalprices;
         StateHasChanged();
-     
+
     }
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
             carts = await SessionStore.GetCartItems();
-            
+
             SessionStore.OnChange += async () =>
             {
-                totalprice=0;
+                totalprice = 0;
                 carts = await SessionStore.GetCartItems();
                 foreach (var cart in carts)
                 {
@@ -91,22 +100,22 @@
     }
     public async Task deleteFromCart(Product product)
     {
-          totalprice = 0;
+        totalprice = 0;
         if (carts is not null)
         {
             carts.Remove(product);
 
-            foreach(var cart in carts)
+            foreach (var cart in carts)
             {
-                 totalprice=totalprice+cart.Price;
+                totalprice = totalprice + cart.Price;
             }
-           
+
             pricestate.Notify(totalprice);
             await SessionStore.RemoveFromCart(product);
         }
         else
             sms = "cart is empty";
-           
+
 
     }
 
