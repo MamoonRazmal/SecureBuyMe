@@ -65,7 +65,7 @@
         if (user is not null && user.Identity.IsAuthenticated)
         {
             string username = user?.Identity.Name;
-            Console.WriteLine("user name is "+username);
+            Console.WriteLine("user name is " + username);
             if (mycart is not null)
             {
                 productRepo.AddToCart(mycart, username);
@@ -90,22 +90,22 @@
     }
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if(firstRender)
+        if (firstRender)
         {
-             SessionStore.OnChange += async () =>
-        {
-            totalprice = 0;
-            carts = await SessionStore.GetCartItems();
-            foreach (var cart in carts)
+            SessionStore.OnChange += async () =>
             {
-                totalprice = totalprice + cart.Price;
-                Console.WriteLine("TotalPrice"+totalprice +"cartprice "+cart.Price+"cartTItem"+cart.ProductName);
-            }
-            StateHasChanged(); // ✅ Forces UI to update when cart changes
-        };
+                totalprice = 0;
+                carts = await SessionStore.GetCartItems();
+                foreach (var cart in carts)
+                {
+                    totalprice = totalprice + cart.Price;
+                    Console.WriteLine("TotalPrice" + totalprice + "cartprice " + cart.Price + "cartTItem" + cart.ProductName);
+                }
+                StateHasChanged(); 
+            };
         }
 
-       
+
     }
 
 
