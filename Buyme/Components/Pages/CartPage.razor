@@ -28,16 +28,13 @@ else
 }
 
 @code {
-    public string CartEmptyMessage { get; set; }
+    public string CartEmptyMessage { get; set; }="Cart is Empty!";
     public int cardId { get; set; }
     public Cart? cart { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        cart = await DbContext.Carts
-        .Include(c => c.CartItems)
-        .ThenInclude(ci => ci.Product)
-        .FirstOrDefaultAsync();
+        cart = repo.GetCart();
     }
     public void payUp(int cardId)
     {

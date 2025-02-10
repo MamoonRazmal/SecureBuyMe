@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using BuyMe.Components.Data;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.EntityFrameworkCore;
@@ -107,7 +108,7 @@ namespace BuyMe.Data
             }
             else return new List<Product>();
         }
-        public void AddToCart(List<Product> productsList,string userName)
+        public void AddToCart(List<Product> productsList, string userName)
         {
             var productIds = productsList;
             var db = dbContextFactory.CreateDbContext();
@@ -151,15 +152,28 @@ namespace BuyMe.Data
         }
         public void RemoveCart(int id)
         {
-                var db = dbContextFactory.CreateDbContext(); 
-                var cart =db.CartItems.Where(x=>x.CartId ==id);
-                if(cart is not null)
-                {
-                     db.CartItems.RemoveRange(cart);
-                       db.SaveChanges();
-                }
-               
+            var db = dbContextFactory.CreateDbContext();
+            var cart = db.CartItems.Where(x => x.CartId == id);
+            if (cart is not null)
+            {
+                db.CartItems.RemoveRange(cart);
+                db.SaveChanges();
+            }
 
+
+        }
+        public Cart GetCart()
+        {
+            var db = dbContextFactory.CreateDbContext();
+            var cart =  db.Carts.Include(c => c.CartItems)
+        .ThenInclude(ci => ci.Product)
+        .FirstOrDefault();
+        if(cart is not null)
+        {
+             return cart;
+        }
+        return null;
+           
         }
 
 

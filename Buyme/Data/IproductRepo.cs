@@ -14,5 +14,6 @@ public interface IproductRepo
     public List<Product> GetProductByTypeSelected(List<string> proType);
 
     public void AddToCart(List<Product> productsList,string userName);
+     public Cart  GetCart();
      public void RemoveCart(int id);
 }

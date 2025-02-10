@@ -47,7 +47,7 @@
                     <button class="btn btn-Primary" type="button" @onclick="() => addTocart(carts)">Checkout</button>
                 </Authorized>
                 <NotAuthorized>
-                    <p>Please Login</p>
+                    <p>Please SignIn To Checkout</p>
                 </NotAuthorized>
             </AuthorizeView>
 
@@ -90,18 +90,22 @@
     }
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-
-
-        SessionStore.OnChange += async () =>
+        if(firstRender)
+        {
+             SessionStore.OnChange += async () =>
         {
             totalprice = 0;
             carts = await SessionStore.GetCartItems();
             foreach (var cart in carts)
             {
                 totalprice = totalprice + cart.Price;
+                Console.WriteLine("TotalPrice"+totalprice +"cartprice "+cart.Price+"cartTItem"+cart.ProductName);
             }
             StateHasChanged(); // ✅ Forces UI to update when cart changes
         };
+        }
+
+       
     }
 
 
