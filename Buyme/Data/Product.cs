@@ -1,3 +1,5 @@
+using BuyMe.Data;
+
 namespace BuyMe.Components.Data
 {
 public class Product
@@ -9,5 +11,7 @@ public class Product
     public decimal Price{get;set;}
     public int ProduktInStock{get;set;}
      public string? Description{ get; set; }
+      // Foreign key to Cart
+     
 }
 }

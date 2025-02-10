@@ -1,7 +1,13 @@
 @using BuyMe.Components.Data
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+
 @inject SessionStore SessionStore
 @inject PriceObserver pricestate
-<button type="button" class="btn btn-Primary" @onclick="LoadCart">Load Cart</button>
+@inject IproductRepo productRepo
+@inject NavigationManager navo
+
+
 <div container class="overflow-auto border-1">
     <div class="left-panel-header">
         <h2>Cart</h2>
@@ -38,7 +44,7 @@
         {
             <AuthorizeView>
                 <Authorized>
-                    <button class="btn btn-Primary" type="button">Checkout</button>
+                    <button class="btn btn-Primary" type="button" @onclick="() => addTocart(carts)">Checkout</button>
                 </Authorized>
                 <NotAuthorized>
                     <p>Please Login</p>
@@ -50,6 +56,26 @@
 
 </div>
 @code {
+
+    public Cart Mycart { get; set; }
+    public async void addTocart(List<Product> mycart)
+    {
+        var authstate = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authstate.User;
+        if (user is not null && user.Identity.IsAuthenticated)
+        {
+            string username = user?.Identity.Name;
+            Console.WriteLine("user name is "+username);
+            if (mycart is not null)
+            {
+                productRepo.AddToCart(mycart, username);
+                navo.NavigateTo("/cart");
+            }
+        }
+
+
+
+    }
     public decimal totalprice { get; set; } = 0;
     public List<Product> carts = new();
     protected override async Task OnInitializedAsync()
@@ -64,22 +90,20 @@
     }
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (firstRender)
-        {
-            carts = await SessionStore.GetCartItems();
 
-            SessionStore.OnChange += async () =>
+
+        SessionStore.OnChange += async () =>
+        {
+            totalprice = 0;
+            carts = await SessionStore.GetCartItems();
+            foreach (var cart in carts)
             {
-                totalprice = 0;
-                carts = await SessionStore.GetCartItems();
-                foreach (var cart in carts)
-                {
-                    totalprice = totalprice + cart.Price;
-                }
-                StateHasChanged(); // ✅ Forces UI to update when cart changes
-            };
-        }
+                totalprice = totalprice + cart.Price;
+            }
+            StateHasChanged(); // ✅ Forces UI to update when cart changes
+        };
     }
+
 
 
 

@@ -1,9 +1,3 @@
-C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\Buyme.csproj.AssemblyReference.cache
-C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\Buyme.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\Buyme.AssemblyInfoInputs.cache
-C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\Buyme.AssemblyInfo.cs
-C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\Buyme.csproj.CoreCompileInputs.cache
-C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\Buyme.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\r.razmal\SecureBuyMe\Buyme\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\r.razmal\SecureBuyMe\Buyme\bin\Debug\net9.0\appsettings.json
 C:\Users\r.razmal\SecureBuyMe\Buyme\bin\Debug\net9.0\Buyme.staticwebassets.runtime.json
@@ -14,6 +8,7 @@ C:\Users\r.razmal\SecureBuyMe\Buyme\bin\Debug\net9.0\Buyme.deps.json
 C:\Users\r.razmal\SecureBuyMe\Buyme\bin\Debug\net9.0\Buyme.runtimeconfig.json
 C:\Users\r.razmal\SecureBuyMe\Buyme\bin\Debug\net9.0\Buyme.dll
 C:\Users\r.razmal\SecureBuyMe\Buyme\bin\Debug\net9.0\Buyme.pdb
+C:\Users\r.razmal\SecureBuyMe\Buyme\bin\Debug\net9.0\BlazorBootstrap.dll
 C:\Users\r.razmal\SecureBuyMe\Buyme\bin\Debug\net9.0\Humanizer.dll
 C:\Users\r.razmal\SecureBuyMe\Buyme\bin\Debug\net9.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
 C:\Users\r.razmal\SecureBuyMe\Buyme\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
@@ -104,10 +99,24 @@ C:\Users\r.razmal\SecureBuyMe\Buyme\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.W
 C:\Users\r.razmal\SecureBuyMe\Buyme\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\r.razmal\SecureBuyMe\Buyme\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\r.razmal\SecureBuyMe\Buyme\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\Buyme.csproj.AssemblyReference.cache
+C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\Buyme.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\Buyme.AssemblyInfoInputs.cache
+C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\Buyme.AssemblyInfo.cs
+C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\Buyme.csproj.CoreCompileInputs.cache
+C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\Buyme.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\Buyme.sourcelink.json
 C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
 C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
 C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\scopedcss\bundle\Buyme.styles.css
 C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\scopedcss\projectbundle\Buyme.bundle.scp.css
+C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\compressed\yxfdm33bor-63oqyoiiv4.gz
+C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\compressed\refgsao5tb-5vmds449nb.gz
+C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\compressed\d5o4a4wkq9-ct0ej5e0q0.gz
+C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\compressed\sismm8xg1l-ezlxc6gzv3.gz
+C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\compressed\q8v6i1uv3e-pisakkcwob.gz
+C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\compressed\36w3eu0hkb-j8zp7bt7w3.gz
+C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\compressed\mfzx4sb2rv-79hai7knhw.gz
 C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\compressed\femw12nbr8-khy4lop6wu.gz
 C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\compressed\92mnta7inj-bqjiyaj88i.gz
 C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\compressed\o67a1q4fz2-c2jlpeoesf.gz
@@ -135,6 +144,7 @@ C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\compressed\0zx0h7c1qe-06098
 C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\compressed\terlcu8tr2-nvvlpmu67g.gz
 C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\compressed\fujit2fjza-s35ty4nyc5.gz
 C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\compressed\jcuepxzs6n-pj5nd1wqec.gz
+C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\compressed\126781foq4-rcxguac5zj.gz
 C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\compressed\dhzh98ouut-v0zj4ognzu.gz
 C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\compressed\p2oqoq81h0-37tfw0ft22.gz
 C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\compressed\uerivzf1uo-hrwsygsryq.gz
@@ -152,7 +162,8 @@ C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\compressed\sw7we8h0j6-notf2
 C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\compressed\u2j5gd26sa-h1s4sie4z3.gz
 C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\compressed\syzw8wm5em-63fj8s7r0e.gz
 C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\compressed\0tt5sxeh7s-0j3bgjxly4.gz
-C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\compressed\izb5wiqogw-5hneff0ev7.gz
+C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\compressed\eojifsclv0-7t9tbfaemk.gz
+C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\compressed\izb5wiqogw-glcu3mwzd8.gz
 C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\compressed\eni0en53k6-5hneff0ev7.gz
 C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\staticwebassets.development.json
@@ -169,4 +180,3 @@ C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\refint\Buyme.dll
 C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\Buyme.pdb
 C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\Buyme.genruntimeconfig.cache
 C:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\ref\Buyme.dll
-c:\Users\r.razmal\SecureBuyMe\Buyme\obj\Debug\net9.0\compressed\126781foq4-rcxguac5zj.gz

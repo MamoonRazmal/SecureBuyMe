@@ -1,4 +1,5 @@
 using BuyMe.Components.Data;
+using System.Collections.Generic;
 
 namespace BuyMe.Data
 {
@@ -6,6 +7,6 @@ namespace BuyMe.Data
     {
         public int Id { get; set; }
        public string? CartOwner{get;set;}
-        public List<Product>? CartItem{get;set;}
+        public List<CartItem>? CartItems{get;set;}
     }
 }

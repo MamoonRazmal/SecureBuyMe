@@ -1,0 +1,53 @@
+@page "/cart"
+@using Buyme.Data
+@using Microsoft.EntityFrameworkCore
+@using Microsoft.AspNetCore.Authorization
+@inject ProductContext DbContext
+@inject IproductRepo repo
+@rendermode InteractiveServer
+@attribute [Authorize(Roles ="User")]
+<h3>Shopping Cart</h3>
+
+@if (cart != null && cart.CartItems.Count() > 0)
+{
+    <p><strong>Cart Owner:</strong> @cart.CartOwner</p>
+
+    <h4>Cart Items</h4>
+    <ul>
+        @foreach (var item in cart.CartItems)
+        {
+            <li>@item.Product.ProductName - $@item.Product.Price x @item.Quantity</li>
+        }
+    </ul>
+    <button class="btn btn-primary" @onclick="() => payUp(cart.Id)">Pay Up</button>
+
+}
+else
+{
+    <p>@CartEmptyMessage</p>
+}
+
+@code {
+    public string CartEmptyMessage { get; set; }
+    public int cardId { get; set; }
+    public Cart? cart { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        cart = await DbContext.Carts
+        .Include(c => c.CartItems)
+        .ThenInclude(ci => ci.Product)
+        .FirstOrDefaultAsync();
+    }
+    public void payUp(int cardId)
+    {
+
+        Console.WriteLine("the button has benn pressed");
+        repo.RemoveCart(cardId);
+        CartEmptyMessage = "Cart is Empty";
+        cart = null;
+
+        StateHasChanged();
+
+    }
+}
