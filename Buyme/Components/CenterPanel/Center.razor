@@ -1,0 +1,81 @@
+@using BuyMe.Components.Data
+@using BuyMe.State
+@inject SessionStore SessionStore
+@inject IproductRepo Produktrepo
+<div class="row ">
+    <div class="w-75">
+        <label for="inputSearch" class="visually-hidden">Search</label>
+        <input type="text" class="form-control w-100" id="inputSearch" placeholder="Search" @bind-value="SearchTerm">
+    </div>
+    <div class="col-auto">
+        <button type="button" class="btn btn-primary mb-3" @onclick="@(() => search(SearchTerm))">Search</button>
+    </div>
+</div>
+<div class="col-4 d-flex flex-fill">
+
+    @if (WholeProducts is not null)
+    {
+        <div class="container">
+            <div class="row row-cols-4 g-3"> <!-- Creates 4 columns per row -->
+                @foreach (var product in WholeProducts)
+                {
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="/img/@(product.ProductPic)" class="card-img-top" alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title">@product.ProductName</h5>
+                                <h5 class="card-title">@product.Price € </h5>
+                                <p class="card-text">@product.Description</p>
+                                <button class="btn btn-primary" @onclick="() => AddToCard(product)">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
+    }
+</div>
+
+
+@code {
+    [Parameter]
+    public List<string> filterList { get; set; }
+    public string SearchTerm { get; set; } = "";
+    public List<Product>? WholeProducts;
+
+    public async Task AddToCard(Product product)
+    {
+        await SessionStore.AddToCart(product);
+    }
+
+    protected override void OnInitialized()
+    {
+        WholeProducts = Produktrepo.getAllProdukt();
+    }
+    public void search(string productName)
+    {
+        if (SearchTerm == "")
+        {
+            WholeProducts = Produktrepo.getAllProdukt();
+        }
+        else
+        {
+            WholeProducts = Produktrepo.getProductByName(productName);
+        }
+
+    }
+    protected override void OnParametersSet()
+    {
+        if(filterList is not null)
+        {
+             WholeProducts = Produktrepo.GetProductByTypeSelected(filterList);
+        }
+       
+    }
+    public void Filteraction()
+    {
+
+    }
+
+}

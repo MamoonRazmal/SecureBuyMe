@@ -1,0 +1,47 @@
+@rendermode InteractiveServer
+<div container class="d-flex row ">
+    <div class="left-panel-header">
+        <h2>Admin Panel</h2>
+
+    </div>
+    <div>
+        <button class="btn btn-primary" @onclick="sendToParent">
+            Add Products
+        </button>
+        <button type="button" class="btn btn-primary" @onclick="SendDeleteSignalTO">Delete Produkt</button>
+        <button type="button" class="btn btn-primary" @onclick="SendUpdateSignalTO">Update Produkt</button>
+    </div>
+</div>
+
+
+
+
+
+
+
+@code
+{
+    [Parameter]
+    public EventCallback<string> UpdateProdukt { get; set; }
+    [Parameter]
+    public EventCallback<string> SendDeleteSignal { get; set; }
+
+    [Parameter]
+    public EventCallback<string> SendDataToParent { get; set; }
+    private string ProductAction = "add";
+    private async Task sendToParent()
+    {
+
+        await SendDataToParent.InvokeAsync(ProductAction);
+    }
+    private async Task SendDeleteSignalTO()
+    {
+        await SendDeleteSignal.InvokeAsync("del");
+    }
+    private async Task SendUpdateSignalTO()
+    {
+        await UpdateProdukt.InvokeAsync("update");
+    }
+
+
+}

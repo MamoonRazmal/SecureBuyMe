@@ -1,0 +1,44 @@
+﻿@inherits LayoutComponentBase
+
+
+@inject NavigationManager NavigationManager
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+
+      
+
+
+        <AuthorizeView Roles="Admin,user">
+            <Authorized>
+
+
+
+
+
+
+            </Authorized>
+            <NotAuthorized>
+                <div class="top-row px-4">
+                    <a href="/Account/Login" target="_parent">Log In</a>
+                </div>
+            </NotAuthorized>
+
+
+        </AuthorizeView>
+
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
+
+<div id="blazor-error-ui" data-nosnippet>
+    An unhandled error has occurred.
+    <a href="." class="reload">Reload</a>
+    <span class="dismiss">🗙</span>
+</div>

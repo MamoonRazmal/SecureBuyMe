@@ -1,0 +1,45 @@
+@inject IproductRepo repo
+@using BuyMe.Components.Data;
+
+
+<div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Product</h1>
+
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Product Name</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" @bind=product.ProductName
+                        placeholder="Product Name">
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-danger" @onclick="DelProduckt">Delete Product</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@code
+{
+    [Inject] IJSRuntime JS { get; set; }
+    Product? product = new Product();
+    public void DelProduckt()
+    {
+        if (product is not null)
+        {
+            repo.deleteProdukt(product.ProductName);
+        }
+        else
+        {
+            Console.WriteLine("Product is null");
+        }
+    }
+
+}

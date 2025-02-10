@@ -1,0 +1,75 @@
+@inject IproductRepo Produktrepo
+
+<div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-1 ">
+                    Filter
+                </h1>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    @if (@ProductTypeList is not null)
+                    {
+                        @foreach (var type in ProductTypeList)
+                        {
+                            <div class="mb-3">
+                                <input type="checkbox" @onclick="() => HandleCheckBox(type)" id="@type" />
+                                <label for="@type">@type</label>
+                            </div>
+
+
+
+                        }
+                    }
+
+
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-primary" @onclick="sendtoParent">Filter</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+@code
+{
+    public void HandleCheckBox(string option)
+    {
+        if (choosenList.Contains(option))
+        {
+            choosenList.Remove(option);
+        }
+        else
+        {
+            choosenList.Add(option);
+        }
+
+    }
+    public List<string> choosenList { get; set; } = new List<string>();
+    [Parameter]
+    public EventCallback<List<string>> sendFilterList { get; set; }
+    public List<string> ProductTypeList = new List<string>();
+    protected override void OnInitialized()
+    {
+        ProductTypeList = Produktrepo.GetProductsByType();
+    }
+
+    public void sendtoParent()
+    {
+        sendFilterList.InvokeAsync(choosenList);
+    }
+
+
+
+
+}

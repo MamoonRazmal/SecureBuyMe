@@ -1,0 +1,45 @@
+@page "/admin"
+@rendermode InteractiveServer
+@using Buyme.Components.LeftPanel
+@using Microsoft.AspNetCore.Authorization;
+
+@attribute [Authorize(Roles = "Admin")]
+<div class="row">
+    <div class="col-2 bg-light vh-100 d-flex flex-colum m-3">
+        <LeftPanelComponent SendDataToParent="receiveFromChild" SendDeleteSignal="receiveDelOP"
+            UpdateProdukt="receiveUpdate" />
+    </div>
+    <div class="col-4 bg-light vh-100 d-flex flex-column m-3">
+        @if (@choosedOption == "add")
+        {
+
+            <AddProdukt></AddProdukt>
+
+        }
+        else if (@choosedOption == "del")
+        {
+            <DeleteProdukt></DeleteProdukt>
+        }
+        else if (@choosedOption == "update")
+        {
+            <UpdateProdukt></UpdateProdukt>
+        }
+    </div>
+</div>
+
+@code
+{
+    private string? choosedOption;
+    private void receiveFromChild(string ProductAction)
+    {
+        choosedOption = ProductAction;
+    }
+    private void receiveDelOP(string sms)
+    {
+        choosedOption = sms;
+    }
+    private void receiveUpdate(string sms)
+    {
+        choosedOption = sms;
+    }
+}

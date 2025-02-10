@@ -1,0 +1,289 @@
+{
+  "Files": [
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\Buyme.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Buyme.5hneff0ev7.bundle.scp.css"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\Img\\09b1c47f-bb8e-4f00-952c-f96847dda96f_mouse.png",
+      "PackagePath": "staticwebassets\\Img\\09b1c47f-bb8e-4f00-952c-f96847dda96f_mouse.png"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\Img\\1.png",
+      "PackagePath": "staticwebassets\\Img\\1.png"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\Img\\165b76c7-34f8-4905-9295-72f3b9ced2f5_bookcover2.jpg",
+      "PackagePath": "staticwebassets\\Img\\165b76c7-34f8-4905-9295-72f3b9ced2f5_bookcover2.jpg"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\Img\\2.png",
+      "PackagePath": "staticwebassets\\Img\\2.png"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\Img\\25f5f047-e64d-47c8-828e-8ad6074ffa0c_music.png",
+      "PackagePath": "staticwebassets\\Img\\25f5f047-e64d-47c8-828e-8ad6074ffa0c_music.png"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\Img\\3.png",
+      "PackagePath": "staticwebassets\\Img\\3.png"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\Img\\3a787dd6-83d6-4c17-86e1-3731dab34375_vodka.png",
+      "PackagePath": "staticwebassets\\Img\\3a787dd6-83d6-4c17-86e1-3731dab34375_vodka.png"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\Img\\4c1bc86e-5fde-488e-a28c-de88e095c77e_vodka.png",
+      "PackagePath": "staticwebassets\\Img\\4c1bc86e-5fde-488e-a28c-de88e095c77e_vodka.png"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\Img\\4da4a08c-f3e5-452a-9010-3f3ab7660cc9_mouse.png",
+      "PackagePath": "staticwebassets\\Img\\4da4a08c-f3e5-452a-9010-3f3ab7660cc9_mouse.png"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\Img\\6711f126-4269-4c8d-8002-461ac648e2f7_camera.png",
+      "PackagePath": "staticwebassets\\Img\\6711f126-4269-4c8d-8002-461ac648e2f7_camera.png"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\Img\\87dfd563-2bec-4c64-a257-ccc49114670d_music.png",
+      "PackagePath": "staticwebassets\\Img\\87dfd563-2bec-4c64-a257-ccc49114670d_music.png"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\Img\\8e600b36-08a7-43cb-a7ae-c2206d56b828_music.png",
+      "PackagePath": "staticwebassets\\Img\\8e600b36-08a7-43cb-a7ae-c2206d56b828_music.png"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\Img\\94f58243-7f41-4c7a-ad1c-2b5443370c92_headphones.png",
+      "PackagePath": "staticwebassets\\Img\\94f58243-7f41-4c7a-ad1c-2b5443370c92_headphones.png"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\Img\\a9331a6e-cc4e-45f5-92eb-5541e8c438c3_music.png",
+      "PackagePath": "staticwebassets\\Img\\a9331a6e-cc4e-45f5-92eb-5541e8c438c3_music.png"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\Img\\cf2c8b81-22f9-4016-ad23-b618bb0b989d_printer.png",
+      "PackagePath": "staticwebassets\\Img\\cf2c8b81-22f9-4016-ad23-b618bb0b989d_printer.png"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\Img\\d2a94567-9d4a-4160-a6d6-0ff3d7c5d9f2_headphones.png",
+      "PackagePath": "staticwebassets\\Img\\d2a94567-9d4a-4160-a6d6-0ff3d7c5d9f2_headphones.png"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\Img\\de430239-60ad-42f2-a5c9-d2c93889c223_music.png",
+      "PackagePath": "staticwebassets\\Img\\de430239-60ad-42f2-a5c9-d2c93889c223_music.png"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\Img\\f01b2d47-4c3d-4b1a-a4ce-59ceb9861292_music.png",
+      "PackagePath": "staticwebassets\\Img\\f01b2d47-4c3d-4b1a-a4ce-59ceb9861292_music.png"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\Img\\shopping-cart.png",
+      "PackagePath": "staticwebassets\\Img\\shopping-cart.png"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "c:\\Users\\r.razmal\\SecureBuyMe\\Buyme\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.Buyme.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.Buyme.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.Buyme.props",
+      "PackagePath": "build\\Buyme.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.Buyme.props",
+      "PackagePath": "buildMultiTargeting\\Buyme.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.Buyme.props",
+      "PackagePath": "buildTransitive\\Buyme.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

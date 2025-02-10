@@ -1,0 +1,132 @@
+@inject IproductRepo repo
+@using BuyMe.Components.Data;
+@inject IConfiguration config
+@using Microsoft.AspNetCore.Components.Forms
+<!-- Modal -->
+<div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Update Product</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Product Name</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" @bind=product.ProductName
+                        placeholder="Product Name">
+                </div>
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Upload Photo @(Error ? message : "")</label>
+
+                    <InputFile OnChange="HandleFileSelected" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label for="ProductType" class="form-label">Product Type</label>
+                    <textarea class="form-control" id="ProductType" rows="3" @bind=product.ProductType></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="ProductType" class="form-label">Product Price</label>
+                    <textarea class="form-control" id="ProductPrice" rows="3" @bind=product.Price></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="Stock" class="form-label">Stock</label>
+                    <input type="number" class="form-control" id="Stock" placeholder="Stock"
+                        @bind=product.ProduktInStock>
+                </div>
+                <div class="mb-3">
+                    <label for="ProductDescription" class="form-label" Product Description</label>
+                        <textarea class="form-control" id="ProductDescription" rows="3"
+                            @bind=product.Description></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-primary" @onclick="UpdateProduckt">Add Product</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+@code {
+    [Inject] IJSRuntime JS { get; set; }
+    [Inject] private IWebHostEnvironment env { get; set; } = default!;
+
+    private string message = "";
+    bool Error { get; set; } = false;
+    Product? product = new Product();
+
+    private List<string> errors = new();
+    public string fileName { get; set; }
+    public long FileSize { get; set; }
+    public string FileType { get; set; }
+    public DateTimeOffset LastModified { get; set; }
+    private long maxFileSize = 1024 * 1024 * 3;
+    private int maxAllowedFiles = 5;
+    public string error { get; set; }
+    public void UpdateProduckt()
+    {
+        if (product is not null)
+        {
+            //first create a search system
+            int Produktid = repo.getProduktIdByName(product.ProductName);
+            repo.updateProdukt(Produktid, product);
+        }
+        else
+        {
+            Console.WriteLine("Product is null");
+        }
+    }
+
+    private async Task HandleFileSelected(InputFileChangeEventArgs e)
+    {
+        Console.WriteLine("this is the test");
+        var file = e.File;
+        if (file == null) return;
+        var allowedExtension = new[] { ".jpg", ".jpeg", ".png", ".gif", ".bmp" };
+        string extension = Path.GetExtension(file.Name);
+        if (!allowedExtension.Contains(extension))
+        {
+            message = "Invalid file type. Only image files are allowed.";
+            Error = true;
+            return; // Opt
+        }
+        try
+        {
+            // Ensure "wwwroot/Img" directory exists
+            var uploadsFolder = Path.Combine(env.WebRootPath, "Img");
+            if (!Directory.Exists(uploadsFolder))
+            {
+                Directory.CreateDirectory(uploadsFolder);
+            }
+            string extention = Path.GetExtension(file.Name);
+
+            // Generate a unique file name to avoid overwrites
+            var fileName = $"{Guid.NewGuid()}_{file.Name}";
+            var filePath = Path.Combine(uploadsFolder, fileName);
+
+            product.ProductPic = fileName;
+
+            // Save file to wwwroot/img
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await file.OpenReadStream(maxAllowedSize: 10_000_000).CopyToAsync(stream); // 10MB limit
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+
+
+    }
+
+
+
+    // errors: A list of strings to store any errors that may occur during file upload.
+
+}

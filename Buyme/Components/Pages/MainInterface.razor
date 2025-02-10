@@ -1,0 +1,57 @@
+@page "/mainpage"
+@rendermode InteractiveServer
+@using Buyme.Components.CenterPanel
+@using Buyme.Components.LeftPanel
+@using Buyme.Components.RightPanel
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize]
+
+<div class=" text-center mb-2 bg-dark image-container" style="width: 100%; height: 400px; overflow: hidden; display: flex;
+        justify-content: center;
+        align-items: center;">
+    <img src="/Img/shopping-cart.png" class="img-fluid " alt="" style="width: 100%; height: 350px;">
+</div>
+<div class="container-fluid h-25">
+
+    <div class="row h-100" id="firstRowDiv">
+        <div class="col d-flex flex-column" id="secRowDiv">
+            <div class="container text-center flex-grow-1">
+
+                <div class="row">
+
+
+                    <Center filterList="filterList"></Center>
+                    <div class="col-2 bg-light vh-100 d-flex flex-column">
+                        <Ads sendFilterList="getInfoFromChild"></Ads>
+                    </div>
+
+
+                    <div class="col-2 bg-light vh-100 d-flex flex-column">
+                        <RightPanelComponent></RightPanelComponent>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@if (@filterList is not null)
+
+{
+    @foreach (var list in filterList)
+
+    {
+        <p>@list</p>
+    }
+
+
+
+}
+@code
+{
+    public List<string> filterList = new List<string>();
+    public void getInfoFromChild(List<string> childdata)
+    {
+        filterList = childdata;
+        StateHasChanged();
+    }
+}

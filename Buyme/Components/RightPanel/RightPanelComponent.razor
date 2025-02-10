@@ -1,0 +1,113 @@
+
+@using BuyMe.Components.Data
+@inject SessionStore SessionStore
+@inject PriceObserver pricestate
+<button type="button" class="btn btn-Primary" @onclick="LoadCart">Load Cart</button>
+<div container class="overflow-auto border-1">
+    <div class="left-panel-header">
+        <h2>Cart</h2>
+
+    </div>
+    @if (carts is not null)
+    {
+        <div class="container ">
+            <div class="row   ">
+                @foreach (var cart in carts)
+                {
+
+                    <div class="card text-center p-1" style="width: 6rem;">
+                        <img src="/img/@(cart.ProductPic)" class="img-thumbnail w-100 h-auto"  alt="produkt Image">
+                        <div class="card-body">
+                            <p class="mb-0 fw-bold small">@cart.ProductName</p>
+                            <p class="mb-0 text-muted small">@cart.Price €</p>
+                           
+                            <button class="btn btn-danger btn-sm mt-1" type="button" @onclick="() => deleteFromCart(cart)">Remove </button>
+
+
+                        </div>
+                    </div>
+
+                }
+
+            </div>
+        </div>
+        <span>Items in cart @carts.Count()</span> <br/>
+        <span>totalprice @totalprice €</span>
+        @if(carts.Count()>0)
+        {
+            <button class="btn btn-Primary" type="button">Checkout</button>
+        }
+    }
+
+</div>
+@code {
+    public decimal totalprice { get; set; } = 0;
+    public List<Product> carts = new();
+    protected override async Task OnInitializedAsync()
+    {
+        pricestate.AddStateActionListener(UpdateTotalPrice);
+    }
+    public void UpdateTotalPrice(decimal totalprices)
+    {
+        totalprice= totalprices;
+        StateHasChanged();
+     
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            carts = await SessionStore.GetCartItems();
+            
+            SessionStore.OnChange += async () =>
+            {
+                totalprice=0;
+                carts = await SessionStore.GetCartItems();
+                foreach (var cart in carts)
+                {
+                    totalprice = totalprice + cart.Price;
+                }
+                StateHasChanged(); // ✅ Forces UI to update when cart changes
+            };
+        }
+    }
+
+
+
+    public string sms { get; set; } = "nosms";
+
+    public List<Product> PostDelList = new List<Product>();
+    public Product onepro { get; set; }
+    public async Task LoadCart()
+    {
+        var getvalue = await SessionStore.GetCartItems();
+        if (getvalue is not null)
+        {
+            carts = getvalue;
+
+        }
+
+
+    }
+    public async Task deleteFromCart(Product product)
+    {
+          totalprice = 0;
+        if (carts is not null)
+        {
+            carts.Remove(product);
+
+            foreach(var cart in carts)
+            {
+                 totalprice=totalprice+cart.Price;
+            }
+           
+            pricestate.Notify(totalprice);
+            await SessionStore.RemoveFromCart(product);
+        }
+        else
+            sms = "cart is empty";
+           
+
+    }
+
+}
